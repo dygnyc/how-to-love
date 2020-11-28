@@ -315,7 +315,7 @@ Let's go through all this code one more time.
 
 First we load the library classic with `require "classic"`. Loading this library returns a table, and we store this table inside `Object`. It has the very basics needed to simulate a class. Because Lua doesn't have classes, but by using `classic` we get a very nice imitation of a class.
 
-Next we load `shape.lua`. In that file we create a new class called `Shape`. We will use this class as a *baseclass* for `Rectangle` and `Circle`. The 2 things that these classes have in common is that they have an `x` and `y` property, and that it moves horizontally. These similarities is what we put in `Shape`.
+Next we load `shape.lua`. In that file we create a new class called `Shape`. We will use this class as a *baseclass* for `Rectangle` and `Circle`. The 2 things that these classes have in common are that they have an `x` and `y` property, and that it moves horizontally. These similarities are what we put in `Shape`.
 
 Next we create the `Rectangle` class. We make it an extension of our baseclass `Shape`. Inside the `:new()` function, the *constructor*, we call the constructor of our baseclass with `Rectangle.super.new(self, x, y)`. We pass `self` as first argument, so that ` Shape` will use the instance of our blueprint, and not the blueprint itself. We give our rectangle a `width` and `height` property, and give it a draw function.
 
